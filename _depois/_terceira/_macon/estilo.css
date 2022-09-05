@@ -1,0 +1,138 @@
+*{ box-sizing: border-box; padding: 0%; margin: 0%;}
+
+body{
+    background: linear-gradient(rgba(0, 102, 255, 0.76),rgba(0, 0, 0, 0.589)) , url(_fotos_macon/LOGO-MACON\ \(1\).png);
+    background-position: center;
+    background-size: cover;
+}
+.menu{
+    background: url(_fotos_macon/cabecalho.jpg);
+    background-position:center;
+    background-size: cover;
+}
+header{
+    width: 100%;
+    height: 100vh;
+    border-bottom: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.377),rgba(0, 0, 255, 0.308)) , url(_fotos_macon/VINTRINE-MACON-V2.jpg);
+    background-position: center;
+    background-size: cover;
+}
+header span{
+    font-size: 10vw;
+    color: white;
+}
+section{
+    padding: 40px;
+    width: 90%;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "b c" "d a";
+    margin: auto;
+}
+section div{
+    padding:10px;
+    height: 20em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 0 5px white;
+    border-radius: 2px;
+    background-color: rgba(255, 255, 255, 0.379);
+    color: white;
+}
+.cont1{
+    grid-area: a;
+}
+.cont2{
+    grid-area: b;
+}
+.imagem1{
+    grid-area: c;
+    background: url(_fotos_macon/bg-macon-frota.jpg) no-repeat center / cover;
+}
+.imagem2{
+    grid-area: d;
+    background: url(_fotos_macon/MACON-CARGAS-02-400x284.jpg) no-repeat center / cover;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+footer a{
+    color: white;
+    padding: 6px 10px;
+    text-decoration: none;
+    background: blue;
+    border: 1px solid white;
+    border-radius: 5px;
+    transition: all .3s;
+}
+footer a:hover{
+    background: white;
+    color: blue;
+    box-shadow: 0 0 10px;
+}
+footer article{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+    padding: 3%;
+    background-color: rgba(255, 255, 255, 0.288);
+}
+footer h4{
+    margin: 30px auto;
+}
+.footer{
+    width: 100%;
+    height: 80px;
+    background: url(_fotos_macon/banner-promo.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+video{
+    position: absolute;
+    right: 10%;
+    border-radius: 10px;
+    width: 80px;
+    opacity: .6;
+    transition: all .8s;
+}
+video:hover{
+    width: 400px;
+    right: 3%;
+    opacity: 1;
+}
+
+@media (max-width:680px) {
+    header{
+        padding: 10px;
+    }
+    section{
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: 1fr ;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: "b " "c" "d " "a";
+        margin: auto;
+    }
+    footer h4{
+        font-size: 10pt;
+    }
+    video{ 
+        width: 50px;
+    }
+}

@@ -1,0 +1,467 @@
+*{
+    box-sizing: border-box;
+    font-family: sans-serif;
+    padding: 0%;
+    margin: 0%;
+}
+.menu input{
+    display: none;
+}
+
+.menu{
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    text-align: end;
+}
+
+.menu ul{
+    display: inline-flex;
+    padding: 0;
+    width: 60%;
+    list-style: none;
+}
+.menu ul li {
+    margin: 0px 50px;
+    width: 120px;
+    padding: 10px;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+}
+.ativo , .menu ul li:hover{
+    background-color: rgba(0, 0, 255, 0.405);
+}
+.menu ul li a{
+    text-decoration: none;
+    color: white;
+}
+.sub-menu-1{
+    display: none;
+}
+.menu ul li:hover .sub-menu-1{
+    display: block;
+    position: absolute;
+    margin-top: 30px;
+    margin-left: 126px;
+}
+.menu ul li:hover .sub-menu-1 ul{
+    display: block;
+    width: auto;
+    background-color: rgba(0, 0, 255, 0.462);
+    padding: 5px;
+}
+.menu ul li:hover .sub-menu-1 ul li{
+    margin: 15px 5px;
+    width: 200px;
+    background-color: transparent;
+    border-bottom: 1px dotted white;
+    border-radius: 0%;
+}
+.menu ul li:hover .sub-menu-1 ul li:last-child{
+    border-bottom: none;
+}
+.menu ul li:hover .sub-menu-1 ul li a:hover{
+    color: rgb(2, 2, 13);
+}
+.sub-menu-1-1{
+    display: none;
+    position: absolute;
+    margin-top: -10px;
+    margin-left: 430px;
+}
+.hover-me:hover .sub-menu-1-1{
+    display: block;
+}
+
+.sub-menu-2{
+    display: none;
+}
+.menu ul li:hover .sub-menu-2{
+    display: block;
+    position: absolute;
+    margin-top: 30px;
+    margin-right: 99px;
+}
+
+.menu ul li:hover .sub-menu-2 ul{
+    display: block;
+    width: 180px;
+    background-color: rgba(0, 0, 255, 0.462);
+    padding: 5px;
+}
+.menu ul li:hover .sub-menu-2 ul li{
+    margin: 15px 4px;
+    width: 170px;
+    border-bottom: 1px dotted white;
+    background-color: transparent;
+    border-radius: 0;
+}
+.menu ul li:hover .sub-menu-2 ul li:last-child{
+    border-bottom: none;
+}
+.menu ul li:hover .sub-menu-2 ul li a:hover{
+    color: black;
+}
+
+/*
+header .menu{
+    position: absolute;
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    padding-right: 50px;
+    background: transparent;
+    top: 0px;
+}
+.menu ul {
+    display: inline-flex;
+    width: 50%;
+    list-style: none;
+}
+.menu ul li{
+    width: 110px;
+    height: 35px;
+    text-align: center;
+    padding: 7px 7px;
+    border-radius: 2px;
+    transition: all .2s ease-in-out;
+}
+.menu a{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 90;
+}
+
+.sub-menu-1{
+    display: none;
+}
+
+
+
+.menu lu li:hover .sub-menu-1 ul{
+    position: absolute;
+    background-color: rgb(0, 100,0);
+}
+
+/*Menu label
+header .menu-label label{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    overflow: hidden;
+}
+header .menu-label .item{
+    width: 100%;
+    height: 2px;
+    background: white;
+}
+header .menu input[type=checkbox]{
+   display: none;
+}
+
+/*Logo - tipo da empresa
+header .logo{
+    position: absolute;
+    left: 10px;
+    padding: 3px;
+    border: transparent;
+    border-bottom: 4px solid blue;
+    border-left: 4px solid blue;
+}
+
+
+.logo h1{
+    color: white;
+    font-size: 20pt;
+}
+.logo span{
+    color: blue;
+    font-size: 12pt; 
+}
+
+@media(min-width:941px){
+    .menu lu li:hover .sub-menu-1{
+        display: block;
+        position: absolute;
+        margin-top: 15px;
+        margin-left: -15px;
+    }
+    .menu-label{
+        display: none;
+    }
+    .menu li:not(:last-child){
+        margin-right: 60px;
+    }
+    .ativo,.menu li:hover{
+        background-color: rgba(3, 13, 100, 0.545);
+    }
+}
+@media(max-width:600px){
+    .menu ul{
+        width: 100%;
+    }
+    .menu-label{
+        display: block;
+    }
+    .menu input[type=checkbox]:checked ~ ul{
+        animation: vir .7s forwards ease-out;
+    }
+    @keyframes vir{
+        0%{ left: 100%;}
+        100%{ left: 0;}
+    }
+    .menu input[type=checkbox]:not(:checked )~ ul{
+        animation: voltar .8s forwards ease-out;
+    }
+    @keyframes voltar{
+        0%{ left: 0%;}
+        100%{ left: 100%;}
+    }
+    .menu ul{
+        position: fixed;
+        width: 100%;
+        height: 600px;
+        left: 100%;
+        top: 60px;
+        background-color: rgba(0, 0, 0, 0.878);
+        flex-direction: column;
+        justify-content: space-around;   
+    }
+    .menu li{
+        width: 100%;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .menu a{
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%; 
+    }
+    .menu li:hover{
+        color: white;
+        border-bottom: 1px solid white;
+    }
+}
+@media(min-width:601px) and (max-width:940px){ 
+    .menu-label{
+        display: block;
+    }
+    #menu-volta:checked ~ ul{
+        animation: vir .2s forwards;
+    }
+    @keyframes vir {
+        0%{ right: 100%;}
+        100%{ right: 0; }
+    }
+    #menu-volta:not(:checked)  ~ ul{
+        animation: voltar .2s forwards;
+    }
+    @keyframes voltar {
+        0%{ right: 0%;}
+        100%{ right: 100%; }
+    }
+    .menu ul{
+        position: fixed;
+        width: 40%;
+        height: 600px;
+        right: 100%;
+        top: 60px;
+        background-color: rgba(0, 0, 0, 0.878);
+        flex-direction: column;
+        justify-content: space-around;
+        
+    }
+    .menu li{
+        width: 100%;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .menu a{
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        
+    }
+    .menu li:hover{
+        color: white;
+        border-bottom: 1px solid white;
+    }
+}
+.menu-label{
+    position: absolute;
+    top: 15px;
+    right: 10px;
+}
+*/
+/*Menu label*/
+header .menu-label label{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    overflow: hidden;
+}
+header .menu-label .item{
+    width: 100%;
+    height: 2px;
+    background: white;
+}
+header .menu input[type=checkbox]{
+   display: none;
+}
+
+/*Logo - tipo da empresa*/
+header .logo{
+    position: absolute;
+    left: 10px;
+    padding: 3px;
+    border: transparent;
+    border-bottom: 4px solid blue;
+    border-left: 4px solid blue;
+}
+
+.logo h1{
+    color: white;
+    font-size: 20pt;
+}
+.logo span{
+    color: blue;
+    font-size: 12pt; 
+}
+
+/*Media Query*/
+@media(min-width:941px){
+    .menu lu li:hover .sub-menu-1{
+        display: block;
+        position: absolute;
+        margin-top: 15px;
+        margin-left: -15px;
+    }
+    .menu-label{
+        display: none;
+    }
+    .menu li:not(:last-child){
+        margin-right: 60px;
+    }
+    .ativo,.menu li:hover{
+        background-color: rgba(3, 13, 100, 0.545);
+    }
+}
+@media(max-width:600px){
+    .menu-label{
+        display: block;
+    }
+    .menu input[type=checkbox]:checked ~ ul{
+        animation: vir .7s forwards ease-out;
+    }
+    @keyframes vir{
+        0%{ left: 100%;}
+        100%{ left: 0;}
+    }
+    .menu input[type=checkbox]:not(:checked )~ ul{
+        animation: voltar .8s forwards ease-out;
+    }
+    @keyframes voltar{
+        0%{ left: 0%;}
+        100%{ left: 100%;}
+    }
+    .menu ul{
+        position: fixed;
+        width: 100%;
+        height: 500px;
+        left: 100%;
+        top: 60px;
+        background-color: rgba(0, 0, 255, 0.78);
+        flex-direction: column;
+        justify-content: space-around; 
+        align-items: center;  
+    }
+    .menu ul li{
+        width: 90%;
+        height: 40px;
+        background-color: transparent;
+        border-radius: 0%;
+    }
+    .menu ul li a{
+        color: #fff;
+        text-align: center;
+    }
+     .ativo, .menu ul li:hover{
+        border-bottom: 1px solid white;
+        background-color: transparent;
+    }
+
+}
+@media(min-width:601px) and (max-width:940px){ 
+    .menu-label{
+        display: block;
+    }
+    #menu-volta:checked ~ ul{
+        animation: vir .2s forwards;
+    }
+    @keyframes vir {
+        0%{ right: 100%;}
+        100%{ right: 0; }
+    }
+    #menu-volta:not(:checked)  ~ ul{
+        animation: voltar .2s forwards;
+    }
+    @keyframes voltar {
+        0%{ right: 0%;}
+        100%{ right: 100%; }
+    }
+    .menu ul{
+        position: fixed;
+        width: 40%;
+        height: 500px;
+        right: 100%;
+        top: 60px;
+        background-color: rgba(0, 0, 255, 0.78);
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center; 
+    }
+    .menu ul li{
+        width: 90%;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0%;
+    }
+
+    .ativo, .menu ul li:hover{
+        color: white;
+        border-bottom: 1px solid white;
+        background-color: transparent;
+       
+    }
+}
+.menu-label{
+    position: absolute;
+    top: 15px;
+    right: 10px;
+}

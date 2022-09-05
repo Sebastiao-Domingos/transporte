@@ -1,0 +1,84 @@
+*{ box-sizing: border-box; margin: 0%; padding: 0%;}
+body{
+    background: linear-gradient(rgba(0, 0, 255, 0.583), rgba(0, 0, 255, 0.303)) ,url(../../_terceira/_macon/_fotos_macon/istockphoto-153905142-1024x1024.jpg) no-repeat center /cover;
+}
+header{
+    width: 100%;
+    height: 10vh;
+}
+section ,fieldset{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 4px;
+}
+section{
+    width: 100%;
+    height: 90vh;
+    background-color: rgba(204, 204, 204, 0.795);
+    align-items: center;
+}
+fieldset{
+    background-color: rgba(0, 0, 0, 0.384);
+    box-shadow: 0 0 10px black;
+}
+legend{
+    color: wheat;
+    text-align: center;
+    padding: 4px 200px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.24);
+}
+form{
+    width: 80%;
+    margin-bottom: 40px;
+}
+
+input ,textarea, .sms{
+    margin-top: 20px;
+    border-radius: 0%;
+    width: 300px;
+    padding: 5px;
+    border: transparent;
+}
+input{
+    border-bottom: 2px solid blue;
+}
+::placeholder{
+    text-transform: uppercase;
+}
+.sms{
+    background-color: rgba(0, 0, 0, 0.22);
+    text-align: center;
+}
+input[type=checkbox]{
+    display: none;
+}
+input[type=checkbox]:checked ~ .processa{
+    display: block;
+    animation: vem 1s forwards;
+    animation: girar 1s 4s infinite linear;
+}
+@keyframes vem {
+    0%{ transform: scale(0);}
+    100%{ transform: scale(1);}
+}
+.processa{
+    display: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 100px;
+    right: 180px;
+    border: 3px solid transparent;
+    border-color: blue transparent #ddd transparent;
+}
+@keyframes girar {
+    0%{ transform: rotate(0);}
+    100%{ transform: rotate(360deg); }
+}
+
+
+

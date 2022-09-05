@@ -1,0 +1,225 @@
+*{
+    box-sizing: border-box;
+    font-family: sans-serif;
+    padding: 0%;
+    margin: 0%;
+}
+body{
+    background: rgba(0, 0, 255, 0.225);
+}
+header{
+    width: 100%;
+    height: 100vh;
+    border-bottom: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+    background: linear-gradient(to bottom,rgba(0, 0, 0, 0.464),rgba(0, 0, 0, 0.463)), url(imagm/gettyimages-1154164634-170x170.jpg);
+    background-position: center;
+    background-size: cover;
+}
+header article{
+    padding: 10px;
+    border: transparent;
+    margin: 150px auto auto 3vw;
+}
+article h1{
+    font-size: 3vw;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 255, 0.5);
+    color: white;
+}
+article h3{
+    font-size: 1.6vw;
+    color: white;
+}
+.imagem{
+    position: absolute;
+    height: 20vw;
+    border: 5px solid  rgba(0, 0, 255, 0.225);
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    box-shadow: 0 0 10px white;
+}
+.img1{
+    width:50%;
+    top: 50%;
+    left: 74%;
+    transform: translate(-50%,-50%);
+    background-image: url(../_terceira/_macon/_fotos_macon/bg-macon-frota.jpg);
+}
+.img2{
+    top: 18em;
+    left: 2em;
+    width: 30%;
+    background-image: url(imagm/IMG_20220814_121219.jpg);
+}
+.img3{
+    height: 12vw;
+    bottom: 1em;
+    width: 20%;
+    left: 50%;
+    transform: translate(-50%);
+    background-image: url(../_terceira/_macon/_fotos_macon/MACON-CARGAS-07-400x284.jpg);
+}
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8vw;
+}
+.regras{
+    background: linear-gradient(rgba(0, 0, 255, 0.536),transparent);
+    padding: 6vw 8vw ;
+    border: transparent;
+    
+}
+.regras h2{
+    margin-bottom: 20px;
+    color: white;
+}
+.regras ul{
+    background:linear-gradient(to top,transparent,rgba(0, 0, 255, 0.447));
+    padding: 3em ;
+}
+.regras li{
+    color: white;
+    line-height: 2.5em;
+}
+.aceito{
+    margin-top: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.aceito-label{
+    margin-right: 30px;
+    cursor: pointer;
+    padding: 5px;
+    border-bottom: 1px solid transparent;
+    transition: all .4s;
+}
+.aceito-label:hover{
+    border-bottom-color: white;
+    animation: back 1s forwards ;
+}
+@keyframes back {
+    0%{ background: rgba(0, 0, 255, 0.658);}
+    100%{background: rgba(0, 0, 255, 0);}
+}
+
+.aceito{
+    position: relative;
+    margin-top: 20px;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.select{
+    position: absolute;
+    top: -40px;
+    left: 100px;
+    width: 20px;
+    height: 20px;
+    border: 3px solid white;
+    border-radius: 50%;
+}
+#aceitar:checked ~ .select{
+    background-color: blue;
+    animation: aumentar 1s alternate ;
+ }
+ @keyframes aumentar {
+     0%{ transform: scale(1);}
+     50%{ transform: scale(1.5); box-shadow: 0 0 10px black;}
+     100%{ transform: scale(1);}
+ }
+
+#aceitar{
+    display: none;
+}
+.caixa{
+    position: absolute;
+    background-color: rgba(0, 0, 255, 0.596);
+    visibility: hidden;
+}
+#aceitar:checked ~ .caixa{
+    visibility: visible;
+    animation: andar 1s forwards ease-in-out;
+}
+#aceitar:not(:checked) ~ .caixa{
+    visibility: hidden;
+    animation: voltar 1s forwards;
+}
+@keyframes andar{
+    0%{left: 90%; }
+    100%{ left: 65%;}
+}
+@keyframes voltar{
+    0%{left: 65%; }
+    100%{ left: 100%;}
+}
+footer{
+    width: 100%;
+    padding: 20px;
+    border-top: 1px solid white;
+}
+
+@media(min-width:601px) and (max-width:940px){
+     header article{
+        padding: 0px 10px;
+    }
+    article h1{
+        font-size: 4vw;
+    }
+    article h3{
+        font-size: 2vw;
+    }
+    .caixa1{
+        margin-left: -50px;
+    }
+    .regras li{
+        font-size: 11pt;
+    }
+    
+}
+@media(max-width:600px){
+    header article{
+        padding: 60px 10px;
+    }
+    article h1{
+        font-size: 6vw;
+    }
+    article h3{
+        font-size: 3vw;
+    }
+    .aceito{
+        justify-content: flex-start;
+    }
+    header article{
+        width: 80%;
+        margin-top: 30px;
+    }
+    .regras{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .regras h2{
+        padding-left: 5px;
+    }
+    .regras ul{
+        width: 100%;
+    }
+    .regras li{
+        font-size: 10pt;
+    }
+    .botao-article a{
+        padding: 8px;
+        font-size: 10pt;
+    }
+}

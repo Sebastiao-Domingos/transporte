@@ -1,0 +1,230 @@
+*{
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
+    font-family: sans-serif;
+}
+.menu{
+    background: rgb(223, 223, 4);
+}
+.menu a{
+    color: black;
+}
+
+header{
+    position: relative;
+    width: 100%;
+    height: 500PX;
+    background-color: rgba(0, 0, 0, 0.584);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+header h1{
+    margin-left: 10px;
+    color: white;
+}
+header h1 span{
+    color: yellow;
+    font-family: 'Courier New';
+    font-size: 9vw;
+    letter-spacing: -15px;
+}
+header p{
+    margin-left: 50%;
+}
+header .foto{
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+    width: 12vw;
+    height: 12vw;
+    background: white;
+    border-radius: 50%;
+    background: radial-gradient(yellow,black);
+}
+.contain{
+    position: relative;
+    width: 100%;
+}
+section{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+section article{
+    box-shadow: 3px 3px 10px yellow;
+    border-radius: 4px;
+    width: 350px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 20px 5px;
+}
+.tipo-viajem div ,.tipo-carro div{
+    height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.tipo-viajem label , .tipo{
+    padding: 10px 5px;
+    width: 120px;
+    height: 40px;
+    background-color: #ccc;
+    border-radius: 2px;
+    margin-top: 10px;
+}
+.vivenda div{
+    display: flex;
+    flex-direction: column;
+}
+input[type=text]{
+    border-bottom: 2px solid black;
+    background-color: #ccc;
+    padding: 5px;
+    margin-top: 10px;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+}
+footer {
+    position: relative;
+    height: 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: rgba(255, 255, 0, 0.196);
+}
+footer button{
+    height: 30px;
+    margin-left: 20%;
+    transition: .4s ease;
+}
+footer button:hover{
+    box-shadow: 0 0 10px yellow;
+}
+footer a{
+    text-decoration: none;
+    color: black;
+    padding: 4px;
+}
+.novidade{
+    position: absolute;
+    right: 10px;
+    bottom: 20px;
+    right: 20px;
+    padding: 5px;
+    background-color: rgba(255, 255, 0, 0.568);
+    cursor: pointer;
+}
+#novidade:checked ~ aside{
+    background-color: rgba(255, 255, 0, 0.24);
+    display: block;
+    animation: vem 1s forwards ease-in-out;
+}
+@keyframes vem {
+    0%{
+        right: 5%;
+        top: 500px;
+        width: 0;
+        height: 0;
+     }
+     50%{ opacity: 0;}
+    100%{
+        width: 40%;
+        height: 565px;
+        right: 0%;
+        top: 0px;
+        opacity: 1;
+    }
+}
+#novidade{
+    display: none;
+}
+#novidade:checked ~ section{
+    animation: fechar 1s forwards ease-out;
+    width: 60%;
+}
+@keyframes fechar {
+    0%{ width: 100%;}
+    100%{ width: 60%;}
+}
+aside{
+   position:absolute ;
+   display: none;
+   width: 0;
+   height: 0;
+   padding: 20px;
+}
+aside h4{
+    margin-bottom: 20px;
+}
+aside p{
+    font-size: 10pt;
+    line-height: 1.6em;
+}
+aside article div{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border-width: 4px;
+    border-style: solid;
+    border-color: #ccc transparent white transparent;
+    animation: gira .7s infinite linear;
+    animation-delay: 2s;
+}
+@keyframes gira {
+    from{ transform: rotate(0deg);}
+    to{ transform: rotate(360deg); }
+}
+@media(max-width:940px) {
+    .menu a{
+        color: #fff;
+    }
+   header h1 span{
+        letter-spacing: -9px;
+    }
+    @keyframes vem {
+        0%{
+            right: 5%;
+            top: 500px;
+            width: 0;
+            height: 0;
+            opacity: 0;
+         }
+         50%{ opacity: 0;}
+        100%{
+            width: 100%;
+            height: 500px;
+            right: 0%;
+            top: 0px;
+            opacity: 1;
+            background-color: rgba(255, 255, 0);
+        }
+    }
+    #novidade{
+        display: none;
+    }
+    @keyframes fechar {
+        0%{ width: 100%;}
+        100%{ width: 100%;}
+    }
+    aside{
+       position:absolute ;
+       display: none;
+       width: 0;
+       height: 0;
+       padding: 20px;
+    }
+}
+

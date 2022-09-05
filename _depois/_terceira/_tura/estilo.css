@@ -1,0 +1,192 @@
+*{ box-sizing: border-box; padding: 0%; margin: 0%; font-family: sans-serif;}
+.menu{
+    background-color: rgb(138, 14, 138);
+}
+body{ background-color: rgba(180, 91, 180, 0.616);}
+
+header{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    border-bottom: 2px solid rgb(138, 14, 138);
+    background-color: rgba(0, 0, 0, 0.37);
+}
+header h1,p{
+    margin-left: 20px;
+    color: white;
+}
+header h1 span{
+    font-size: 9vw;
+    letter-spacing:-20px;
+    color: rgb(138, 14, 138);
+}
+header p{
+    margin-left: 10%;
+}
+header .foto1{
+    width: 12vw;
+    height: 12vw;
+    border-radius: 50%;
+    background: radial-gradient(black,rgb(138, 14, 138),white);
+    position: absolute;
+    right: 50px;
+    top: 100px;
+    animation: gira 3s infinite linear;
+}
+@keyframes gira {
+    0%{ transform: rotate(0deg); box-shadow: 0 0 0 black;}
+    50%{box-shadow: 0 0 90px black;}
+    100%{ transform: rotate(360deg);box-shadow: 0 0 0 black; }
+}
+.contain{
+    width: 100%;
+}
+section{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+section article{
+    width: 250px;
+    height: 230px;
+    padding: 5px;
+    background-color: white;
+    margin: 10px 10px;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+section .tipo-viajem div ,.tipo-carro div ,.vivenda div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.tipo-viajem div label , .tipo-carro div label{
+    margin: 5px;
+    padding: 5px;
+    width: 120px;
+    background-color: rgba(138, 14, 138, 0.801);
+    border-radius: 3px;
+}
+.vivenda div label{
+    font-size: 10pt;
+    margin-bottom: 20px;
+}
+.vivenda div input ,.localidade div input{
+    border: transparent;
+    border-bottom: 2px solid black;
+    background-color: rgba(138, 14, 138, 0.473);
+    padding: 5px;
+}
+::placeholder{
+    color: white;
+}
+
+aside{
+    position: relative;
+    display: none; 
+}
+#novidade:checked ~ aside{
+    display: block;
+    animation: vem 2s forwards;
+}
+@keyframes vem {
+    0%{ 
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+    50%{
+        opacity: .3;
+    }
+    100%{
+        width: 100%;
+        height: 200px;
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.425);
+        opacity: 1;
+    }
+}
+aside p{
+    font-size: 11pt;
+    margin-top: 20px;
+    font-weight: normal;
+}
+aside div{
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgb(191, 151, 229) transparent rgba(138, 14, 138, 0.473) transparent;
+    animation: girar 2s infinite linear;
+    animation-delay: 3s;
+}
+@keyframes girar {
+    0%{ transform: rotate(0deg);}
+    100%{ transform: rotate(360deg);}
+}
+footer{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-start;
+}
+footer button{
+    margin-left: 20%;
+}
+footer a:hover {
+    background-color: rgba(138, 14, 138, 0.973);
+    color: white;
+}
+footer button a{
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+    transition: all .4s;
+}
+footer .novidade{
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    padding: 5px;
+    border: 1px solid rgba(138, 14, 138, 0.973);
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all .4s;
+}
+
+footer .novidade:hover{
+    background-color: white;
+}
+
+input[type=checkbox]{
+    display: none;
+}
+@media (max-width:940px) {
+    header h1{
+        font-size: 18pt;
+    }
+    header h1 span{
+        font-size: 57pt;
+        margin-left: -10px;
+    }
+    aside article p{
+        font-size: 10pt;
+        line-height: 1.5em;
+        text-align: justify;
+    }
+}

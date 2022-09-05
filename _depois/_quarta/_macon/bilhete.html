@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt - pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empresa Transportadora Macon</title>
+    <link rel="stylesheet" href="../../../_menu/menu.css">
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <nav class="menu">
+            <input type="checkbox" name="" id="menu-Volta">
+            <ul>
+                <li><a href="../../_segunda/index.html">Home</a></li>
+                <li><a href="">Definições</a></li>
+                <li><a href="">Ajuda</a></li>
+                <li><a href="">Media</a></li>
+            </ul>
+            
+            <div class="menu-label">
+                <label for="menu-Volta">
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                </label>
+            </div>
+        </nav>
+    </header>
+    <section>
+        <form action="submit">
+            <h2>Preencha todos os dados, Cuidadosamente</h2>
+            <fieldset>
+                <legend>Cadastramento do Bilhete de passagem</legend>
+
+                <p> <label for="nome"> Nome Complento : </label> <input type="text" name="nome" id="nome" placeholder="Nome Completo"></p>
+                <p> <label for="bi">Número do BI :</label> <input type="text" name="bi" id="bi" placeholder="Número do BI"></p>
+                <p> <label for="tel">Nº telefone : </label> <input type="tel" name="tel" id="tel" placeholder="Número de Telefone"></p>
+                <p><label for="email">E-mail : </label> <input type="email" name="email" id="email" placeholder="E-mail"></p>
+                <p> <label for="data">Data da Viajem : </label> <input type="date" name="data" id="data" placeholder="Dia e o mês" > </p>
+                <p> <label for="hora">Hora : </label> <input type="time" name="hora" id="hora" min="1" max="24" placeholder="Hora da viajem"></p>
+                <p> <label for="">Sexo : </label> 
+                    <label for="masc">Maculino <input type="radio" name="sexo" id="masc"></label>
+                    <label for="fem">Femenino <input type="radio" name="sexo" id="fem"></label>
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend>Estado da Saúde</legend>
+                <p><label for="donca">Sofres de : </label> <input type="text" name="doenca" id="doenca"></p>
+                <p><label for="">Alguma vez já sofreste de tensão?</label>
+                    <label for="sim">Sim <input type="radio" name="sim" id="sim"> </label>
+                    <label for="nao">Não <input type="radio" name="sim" id="nao"></label>
+                </p>
+                <p><label for="">Quando foi o ultimo  dia que foste a um consultório ?</label> <input type="date" name="" id=""></p>
+            </fieldset>
+        </form>
+        <input type="button" value="Enviar" id="enviar" >
+    </section>
+    <footer>
+        <h1>VEAngola</h1>
+        <a href="">Facebook</a><a href="">WhatsAp</a>
+    </footer>
+</body>
+</html>
